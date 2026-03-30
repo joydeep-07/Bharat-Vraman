@@ -10,10 +10,12 @@ import ExploreTemples from "./pages/ExploreTemples";
 import Festivals from "./pages/Festivals";
 import Mythology from "./pages/Mythology";
 import TempleDetail from "./pages/TempleDetail";
+import SmoothScroll from "./utils/SmoothScroll";
 
 const App = () => {
   return (
     <Router>
+      <SmoothScroll/>
       <Routes>
         {/* Root Layout */}
         <Route path="/" element={<Root />}>
