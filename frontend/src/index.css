@@ -44,7 +44,11 @@
 
 .font-normal{
   font-family: "normal", sans-serif;
+}
 
+body{
+  font-family: "normal", sans-serif;
+  font-weight: 400;
 }
 
 ::-webkit-scrollbar{
