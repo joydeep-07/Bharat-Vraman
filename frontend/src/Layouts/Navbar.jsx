@@ -99,15 +99,15 @@ const Navbar = () => {
           <div className="flex justify-between items-center h-15 sm:h-18 md:h-20">
             {/* Logo */}
             <div className="text-center cursor-pointer">
-              <Link to="/" className="flex items-baseline font-heading">
+              <Link to="/" className="flex items-baseline">
                 <span
-                  className="font-extrabold text-lg sm:text-xl md:text-3xl pr-1 tracking-tight"
+                  className=" text-lg sm:text-xl md:text-3xl pr-1 tracking-tight"
                   style={{ color: "var(--accent-secondary)" }}
                 >
                   Incredible
                 </span>
                 <span
-                  className="font-extrabold text-lg sm:text-xl md:text-3xl tracking-wider"
+                  className=" text-lg sm:text-xl md:text-3xl tracking-wider"
                   style={{ color: "var(--accent-gold)" }}
                 >
                   India
