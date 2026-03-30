@@ -20,13 +20,8 @@ const Hero = () => {
           {/* MAIN HEADING - No animation, no ref */}
           <div
             id="bigtext"
-            style={{
-              fontFamily: "karatone, sans-serif",
-              lineHeight: 1,
-              letterSpacing: "0.03em",
-            }}
             className="
-              text-[var(--text-main)]
+             
               text-[30px] 
               xs:text-[50px]
               sm:text-[90px]
@@ -40,7 +35,7 @@ const Hero = () => {
             </div>
 
             <div className="overflow-hidden">
-              <span className="block font-heading text-[var(--accent-primary)]">
+              <span className="block font-heading">
                 Pilgrimage
               </span>
             </div>

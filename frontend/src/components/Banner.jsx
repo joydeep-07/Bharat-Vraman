@@ -12,8 +12,8 @@ const Banner = () => {
         <div className="mt-10 sm:mt-15 p-5 flex flex-col pb-15 justify-center items-center text-center">
           <h1
             id="blogtext"
-            style={{ fontFamily: "karatone" }}
             className="
+            font-heading
             text-[38px]
             sm:text-[60px]
             md:text-[80px]
@@ -57,19 +57,20 @@ const Banner = () => {
             <div className="flex flex-col sm:flex-row">
               <img
                 className="h-50 sm:h-48 pr-0 sm:pr-6 mb-4 sm:mb-0"
-                src="https://framerusercontent.com/images/Jq9CvZn5nyua3F6GHd8cdtsLduo.png?scale-down-to=512&width=2590&height=1884"
+                src="https://i.pinimg.com/736x/09/60/43/0960431bb2c967035f858ced179f7ca6.jpg"
                 alt=""
               />
 
               <h1
-                style={{ fontFamily: "karatone", lineHeight: 1 }}
+                style={{ lineHeight: 1.3 }}
                 className="
-                text-[32px] 
-                sm:text-[42px] 
-                md:text-[50px]
-              "
+              font-heading
+              text-[30px]
+              sm:text-[38px]
+              md:text-4xl
+            "
               >
-                Explore Sacred <br /> Places with Deep <br /> Spiritual <br />{" "}
+                Explore Sacred <br /> Places with Deep <br /> Spiritual
                 Significance
               </h1>
             </div>
@@ -87,11 +88,12 @@ const Banner = () => {
           {/* RIGHT SIDE */}
           <div className="right w-full md:w-1/2 sm:p-6 pt-5 md:p-10 md:pt-20">
             <h1
-              style={{ fontFamily: "karatone", lineHeight: 1 }}
+              style={{ lineHeight: 1.3 }}
               className="
+              font-heading
               text-[30px]
               sm:text-[38px]
-              md:text-[48px]
+              md:text-4xl
             "
             >
               Festivals, Rituals & <br />
