@@ -125,37 +125,84 @@ const Navbar = () => {
             {/* Desktop Nav */}
             <div className="hidden md:block">
               <ul className="flex space-x-8 lg:space-x-12">
-                {["Explore Temples", "Festivals", "Mythology", "Contact"].map(
-                  (item, index) => (
-                    <li key={index} className="group">
-                      <Link
-                        to={
-                          item === "Explore Temples"
-                            ? "/explore"
-                            : item === "Festivals"
-                              ? "/festivals"
-                              : item === "Mythology"
-                                ? "/mythology"
-                                : "/"
-                        }
-                        className="tracking-wide transition-colors duration-300 relative py-2 text-sm"
-                        style={{ color: "var(--text-main)" }}
-                        onMouseEnter={(e) =>
-                          (e.target.style.color = "var(--accent-primary)")
-                        }
-                        onMouseLeave={(e) =>
-                          (e.target.style.color = "var(--text-main)")
-                        }
-                      >
-                        {item}
-                        <span
-                          className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full"
-                          style={{ background: "var(--accent-primary)" }}
-                        ></span>
-                      </Link>
-                    </li>
-                  ),
-                )}
+                <li className="group">
+                  <Link
+                    to="/mythology"
+                    className="tracking-wide transition-colors duration-300 relative py-2 text-sm"
+                    style={{ color: "var(--text-main)" }}
+                    onMouseEnter={(e) =>
+                      (e.target.style.color = "var(--accent-primary)")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.target.style.color = "var(--text-main)")
+                    }
+                  >
+                    Mythology
+                    <span
+                      className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full"
+                      style={{ background: "var(--accent-primary)" }}
+                    ></span>
+                  </Link>
+                </li>
+                <li className="group">
+                  <Link
+                    to="/explore"
+                    className="tracking-wide transition-colors duration-300 relative py-2 text-sm"
+                    style={{ color: "var(--text-main)" }}
+                    onMouseEnter={(e) =>
+                      (e.target.style.color = "var(--accent-primary)")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.target.style.color = "var(--text-main)")
+                    }
+                  >
+                    Explore Temples
+                    <span
+                      className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full"
+                      style={{ background: "var(--accent-primary)" }}
+                    ></span>
+                  </Link>
+                </li>
+
+                <li className="group">
+                  <Link
+                    to="/festivals"
+                    className="tracking-wide transition-colors duration-300 relative py-2 text-sm"
+                    style={{ color: "var(--text-main)" }}
+                    onMouseEnter={(e) =>
+                      (e.target.style.color = "var(--accent-primary)")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.target.style.color = "var(--text-main)")
+                    }
+                  >
+                    Festivals
+                    <span
+                      className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full"
+                      style={{ background: "var(--accent-primary)" }}
+                    ></span>
+                  </Link>
+                </li>
+
+                <li className="group">
+                  <Link
+                    to="/"
+                    className="tracking-wide transition-colors duration-300 relative py-2 text-sm"
+                    style={{ color: "var(--text-main)" }}
+                    onMouseEnter={(e) =>
+                      (e.target.style.color = "var(--accent-primary)")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.target.style.color = "var(--text-main)")
+                    }
+                  >
+                    Contact
+                    <span
+                      className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full"
+                      style={{ background: "var(--accent-primary)" }}
+                    ></span>
+                  </Link>
+                </li>
               </ul>
             </div>
 
@@ -179,13 +226,10 @@ const Navbar = () => {
 
       {/* Mobile Panel */}
       <div
-        className={`side-panel fixed top-0 right-0 h-full w-[70vw] z-50 transform transition-transform duration-300 md:hidden ${
+        className={`side-panel fixed bg-[var(--bg-main)] top-0 right-0 h-full w-[70vw] z-50 transform transition-transform duration-300 md:hidden ${
           isSidePanelOpen ? "translate-x-0" : "translate-x-full"
         }`}
-        style={{
-          background: "var(--bg-secondary)",
-          boxShadow: "0 20px 40px rgba(0,0,0,0.2)",
-        }}
+       
       >
         <div className="flex flex-col h-full pt-20 px-6">
           <button
@@ -198,9 +242,9 @@ const Navbar = () => {
 
           <ul className="flex flex-col space-y-4">
             {[
+              { name: "Mythology", icon: FiBookOpen, path: "/mythology" },
               { name: "Explore Temples", icon: FiCompass, path: "/explore" },
               { name: "Festivals", icon: FiCalendar, path: "/festivals" },
-              { name: "Mythology", icon: FiBookOpen, path: "/mythology" },
               { name: "Contact", icon: FiMap, path: "/" },
             ].map((item, i) => (
               <li key={i}>
@@ -244,7 +288,7 @@ const Navbar = () => {
           className="fixed inset-0 z-40 md:hidden"
           style={{
             background: "rgba(0,0,0,0.2)",
-            backdropFilter: "blur(4px)",
+            backdropFilter: "blur(2px)",
           }}
           onClick={closeSidePanel}
         />
