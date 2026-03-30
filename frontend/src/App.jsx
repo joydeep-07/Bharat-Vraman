@@ -1,7 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// Import your pages
+// Layout
+import Root from "./Layouts/Root";
+
+// Pages
 import Home from "./pages/Home";
 import ExploreTemples from "./pages/ExploreTemples";
 import Festivals from "./pages/Festivals";
@@ -12,11 +15,15 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/explore" element={<ExploreTemples />} />
-        <Route path="/festivals" element={<Festivals />} />
-        <Route path="/mythology" element={<Mythology />} />
-        <Route path="/temple/:id" element={<TempleDetail />} />
+        {/* Root Layout */}
+        <Route path="/" element={<Root />}>
+          {/* Nested Routes */}
+          <Route index element={<Home />} />
+          <Route path="explore" element={<ExploreTemples />} />
+          <Route path="festivals" element={<Festivals />} />
+          <Route path="mythology" element={<Mythology />} />
+          <Route path="temple/:id" element={<TempleDetail />} />
+        </Route>
       </Routes>
     </Router>
   );

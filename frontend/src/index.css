@@ -1,1 +1,48 @@
 @import "tailwindcss";
+
+:root {
+  /* Backgrounds – warm, divine, soft */
+  --bg-main: #fffbeb;              /* light amber */
+  --bg-secondary: #fef3c7;         /* soft golden tint */
+  --bg-gradient: linear-gradient(
+    135deg,
+    #fff7ed,
+    #ffedd5,
+    #fde68a
+  );
+
+  /* Text – strong readability */
+  --text-main: #3b2f1b;            /* deep brown (temple tone) */
+  --text-secondary: #7c5a2b;       /* muted warm text */
+
+  /* Accent Colors – temple gold */
+  --accent-primary: #d97706;       /* amber-600 */
+  --accent-secondary: #b45309;     /* amber-700 (hover) */
+  --accent-gold: #f59e0b;          /* highlight gold */
+
+  /* Borders */
+  --border-light: #fcd34d;         /* soft gold border */
+}
+
+@font-face {
+  font-family: "heading";
+  src: url("./assets/fonts/Heading.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "normal";
+  src: url("./assets/fonts/Normal.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-heading{
+  font-family: "heading", sans-serif;
+}
+
+.font-normal{
+  font-family: "normal", sans-serif;
+
+}
