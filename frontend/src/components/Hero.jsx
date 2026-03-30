@@ -78,7 +78,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* <CircleCursor targetId={"hero"} hoverId={"bigtext"} /> */}
+      <CircleCursor targetId={"hero"} hoverId={"bigtext"} />
     </>
   );
 };

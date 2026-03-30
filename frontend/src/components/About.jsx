@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import img from "../assets/images/ban.jpg";
+import CircleCursor from "./CircleCursor";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -125,6 +126,7 @@ const About = () => {
           "Welcome to The Art Gallery, a curated collection of exquisite artworks from around the world. Our mission is to connect art enthusiasts with stunning pieces that inspire and captivate. Whether you're an avid collector or a casual admirer, we invite you to explore our diverse range of artworks and discover the stories behind each piece. Thank you for being a part of our artistic journey.",
         )}
       </div>
+      <CircleCursor targetId={"about"} hoverId={"abouttext"} />
     </section>
   );
 };
