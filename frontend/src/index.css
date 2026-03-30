@@ -46,3 +46,7 @@
   font-family: "normal", sans-serif;
 
 }
+
+::-webkit-scrollbar{
+  display: none;
+}
