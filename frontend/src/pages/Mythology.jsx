@@ -80,7 +80,7 @@ const Mythology = () => {
 
   return (
     <>
-      <div className={`${isMobile ? "min-h-screen" : "h-screen"}`}>
+      <div className={`${isMobile ? "min-h-screen" : "h-screen bg-[var(--bg-main)] "}`}>
         <section
           ref={horizontalSectionRef}
           className={`relative ${
