@@ -4,6 +4,7 @@ import About from '../components/About'
 import Banner from '../components/Banner'
 import Footer from '../Layouts/Footer'
 import Story from '../components/Story'
+import Verse from '../components/Verse'
 
 const Home = () => {
   return (
@@ -11,8 +12,11 @@ const Home = () => {
       <Hero />
       <About />
       <Banner />
-      <Story/>
-      <Footer/>
+      <Story />
+      <div className="py-10">
+        <Verse />
+      </div>
+      <Footer />
     </div>
   );
 }

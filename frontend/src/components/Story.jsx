@@ -1,17 +1,17 @@
 import React, { useEffect, useRef } from "react";
 import sketch from "../assets/images/virat-rup.jpg";
 import CircleCursor from "./CircleCursor";
+import Verse from "./Verse";
 
 const Story = () => {
  
   return (
     <div
-      id="exp"
+      id="story"
      
       className=" relative max-md:h-auto max-w-8xl md:px-20 mx-auto max-md:pb-10"
     >
       {/* LEFT SIDE (UNCHANGED DESKTOP, FIXED MOBILE) */}
-  
 
       {/* MOBILE IMAGE */}
       <div className="mt-5 hidden max-md:flex justify-center px-4">
@@ -34,7 +34,7 @@ const Story = () => {
         <div
           
           className="
-            overflow-y-scroll w-2/3 p-5
+            overflow-y-scroll w-2/3
 
             max-lg:w-[600px]
 
@@ -71,7 +71,7 @@ const Story = () => {
         </div>
       </div>
 
-      <CircleCursor targetId={"exp"} hoverId={"exptext"} />
+      <CircleCursor targetId={"story"} />
     </div>
   );
 };
