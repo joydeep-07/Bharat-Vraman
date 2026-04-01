@@ -96,12 +96,10 @@ const Banner = () => {
               md:text-4xl
             "
             >
-              Festivals, Rituals & <br />
-              Pilgrimage Routes <br />
-              Across India
+              Festivals, Rituals & Pilgrimage <br /> Routes Across India
             </h1>
 
-            <p className="md:py-5 mt-6 md:mt-20 text-sm sm:text-base">
+            <p className="md:py-5 mt-6 md:mt-30 text-sm sm:text-base">
               Get detailed insights into temple festivals, darshan timings,
               nearby attractions, and essential travel guidance for devotees and
               explorers.

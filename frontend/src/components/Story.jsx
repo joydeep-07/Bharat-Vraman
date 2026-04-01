@@ -1,52 +1,13 @@
 import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import sketch from "../assets/images/virat-rup.jpg";
 import CircleCursor from "./CircleCursor";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const Story = () => {
-  const sectionRef = useRef(null);
-  const contentRef = useRef(null);
-
-  useEffect(() => {
-    const isMobile = window.innerWidth < 768;
-
-    const ctx = gsap.context(() => {
-      gsap.from(".fade-item", {
-        opacity: 0,
-        y: 40,
-        duration: 1,
-        stagger: 0.3,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: contentRef.current,
-          start: "top 80%",
-          end: "bottom 60%",
-          scrub: 1,
-        },
-      });
-
-      // KEEP DESKTOP PIN AS IT IS
-      if (!isMobile) {
-        ScrollTrigger.create({
-          trigger: sectionRef.current,
-          start: "top top",
-          end: "+=2000",
-          pin: true,
-          scrub: 1,
-        });
-      }
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
-
+ 
   return (
     <div
       id="exp"
-      ref={sectionRef}
+     
       className=" relative max-md:h-auto max-w-8xl md:px-20 mx-auto max-md:pb-10"
     >
       {/* LEFT SIDE (UNCHANGED DESKTOP, FIXED MOBILE) */}
@@ -71,7 +32,7 @@ const Story = () => {
       >
         {/* TEXT CONTENT */}
         <div
-          ref={contentRef}
+          
           className="
             overflow-y-scroll w-2/3 p-5
 
