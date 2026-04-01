@@ -46,15 +46,20 @@ const CircleCursor = ({ targetId, hoverId }) => {
 
   return (
     <div
-      className="pointer-events-none fixed z-[60] bg-white"
+      className="pointer-events-none fixed z-[60]"
       style={{
         width: `${size}px`,
         height: `${size}px`,
         borderRadius: "50%",
         top: mousePos.y - size / 2,
         left: mousePos.x - size / 2,
-        mixBlendMode: "difference",
-        border: "1px solid rgba(0,0,0,0.2)",
+
+        backdropFilter: "grayscale(1)", 
+        WebkitBackdropFilter: "grayscale(1)",
+
+        backgroundColor: "rgba(255,255,255,0.2)",
+        // border: "1px solid rgba(0,0,0,0.3)",
+
         transition: "width 0.3s ease-out, height 0.3s ease-out",
       }}
     />

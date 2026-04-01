@@ -89,8 +89,7 @@ const Navbar = () => {
           showNavbar ? "translate-y-0" : "-translate-y-[100%]"
         }`}
         style={{
-          background: "rgba(255,255,255,0.6)",
-          backdropFilter: "blur(10px)",
+          backdropFilter: "blur(3px)",
         }}
         onMouseEnter={isMobile ? undefined : handleMouseEnter}
         onMouseLeave={isMobile ? undefined : handleMouseLeave}
