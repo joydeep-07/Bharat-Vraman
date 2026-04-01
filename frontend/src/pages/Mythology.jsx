@@ -3,9 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import img1 from "../assets/images/virat-rup.jpg";
-// import img2 from "../assets/paintings/paint17.jpg";
 import img3 from "../assets/images/krishna.jpg";
-import img4 from "../assets/images/ban.jpg";
 // import Footer from "../layouts/Footer";
 import { Link } from "react-router-dom";
 
@@ -66,14 +64,14 @@ const Mythology = () => {
         start: "top top",
         end: `+=${scrollWidth}`,
         pin: true,
-        scrub: 0.2,
+        scrub: 1,
         anticipatePin: 1,
       },
     });
 
     tl.to(horizontalContent, { x: -scrollWidth, ease: "none" }).to(
       mainTextContent,
-      { x: -mainTextWidth * 1.6, ease: "none" },
+      { x: -mainTextWidth * 1.2, ease: "none" },
       0,
     );
 
@@ -122,7 +120,7 @@ const Mythology = () => {
                       : "text-4xl lg:text-5xl pt-5"
                   } font-heading `}
                 >
-                  Who I am
+                  The Virat Roop of Shri Krishna
                 </h1>
 
                 <h2
@@ -132,13 +130,11 @@ const Mythology = () => {
                       : "text-lg lg:text-md max-w-6xl whitespace-normal"
                   }`}
                 >
-                  I’ve been painting for 17 years, growing through countless
-                  canvases, styles, and inspirations. This long artistic journey
-                  shaped the way I observe the world and nurtured my sense of
-                  detail, composition, and storytelling. Alongside my art, I
-                  built a strong foundation in technology, which allows me to
-                  approach product development with both creativity and
-                  structure.
+                  During the great war of Kurukshetra in the Mahabharata, Lord
+                  Krishna revealed his Vishwaroop (Virat Roop) to Arjuna. In
+                  this divine form, Krishna manifested himself as the entire
+                  universe infinite faces, countless eyes, blazing like a
+                  thousand suns, containing all creation within him.
                 </h2>
                 <h2
                   className={`text-neutral-700 pt-5 text-justify ${
@@ -147,13 +143,12 @@ const Mythology = () => {
                       : "text-lg lg:text-md max-w-6xl whitespace-normal"
                   }`}
                 >
-                  I’ve led and mentored design teams, collaborated across
-                  departments, and acted as a bridge between stakeholders,
-                  users, and developers. My goal is always to create experiences
-                  that are visually engaging, intuitive to use, and aligned with
-                  a strong strategic vision. Art taught me expression;
-                  technology taught me execution and together, they define the
-                  way I work.
+                  Arjuna witnessed time itself within Krishna, the past,
+                  present, and future unfolding simultaneously. He saw warriors
+                  entering the fiery mouths of the Lord, symbolizing destiny and
+                  destruction. Overwhelmed and humbled, Arjuna realized Krishna
+                  was not just his charioteer, but the Supreme Being beyond
+                  human comprehension.
                 </h2>
               </div>
 
@@ -173,7 +168,7 @@ const Mythology = () => {
               className={`${
                 isMobile
                   ? " w-full flex flex-col items-center justify-center py-10 px-6"
-                  : "flex-shrink-0 flex justify-center gap-8 lg:gap-16 md:px-50 md:pb-40"
+                  : "flex-shrink-0 flex justify-center gap-8 lg:gap-16 md:px-50 md:pb-70"
               }`}
             >
               <div
@@ -189,7 +184,7 @@ const Mythology = () => {
                       : "text-3xl lg:text-4xl pt-5"
                   }font-heading`}
                 >
-                  My development Journey
+                  The Teachings of the Bhagavad Gita
                 </h1>
 
                 <div
@@ -204,16 +199,12 @@ const Mythology = () => {
                         : "text-lg lg:text-md max-w-xl whitespace-normal"
                     }`}
                   >
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Unde sed eligendi quia laborum temporibus voluptate
-                    voluptatum odit quae obcaecati corrupti debitis labore, at
-                    magnam quod ea, in vitae asperiores ut aliquam consectetur
-                    quas non delectus quidem voluptas? Labore reiciendis qui
-                    obcaecati facere amet veritatis porro est suscipit optio
-                    dolore similique sint aut aliquam ipsum, corporis magni
-                    molestiae sequi, provident ea eos distinctio laudantium!
-                    Fugit distinctio quaerat repudiandae libero reprehenderit
-                    enim!
+                    On the battlefield of Kurukshetra, Arjuna was filled with
+                    doubt and sorrow, unwilling to fight against his own kin. It
+                    was then that Lord Krishna imparted the eternal wisdom of
+                    the Bhagavad Gita — a dialogue that transcends time, guiding
+                    humanity on duty, righteousness, and the nature of life
+                    itself.
                   </h2>
 
                   <h2
@@ -223,10 +214,11 @@ const Mythology = () => {
                         : "text-lg lg:text-md max-w-lg whitespace-normal"
                     }`}
                   >
-                    I've been designing for 17 years. My background in art and
-                    technology allows me to flexibly manage the product
-                    development process. I've led design teams, building bridges
-                    between stakeholders, users, and team members.
+                    Krishna taught that one must perform their duty (Dharma)
+                    without attachment to results. He revealed the paths of
+                    Karma (action), Bhakti (devotion), and Jnana (knowledge),
+                    showing that true liberation comes from surrendering to the
+                    divine and understanding one's higher purpose.
                   </h2>
                 </div>
               </div>
@@ -273,7 +265,7 @@ const Mythology = () => {
                           : "text-3xl lg:text-4xl pt-10"
                       } font-heading`}
                     >
-                      Lorem ipsum dolor, sit adipisicing ?
+                      The Eternal Cycle of Dharma
                     </h1>
 
                     <h2
@@ -283,10 +275,11 @@ const Mythology = () => {
                           : "pt-6 lg:pt-10 text-lg lg:text-md max-w-4xl whitespace-normal"
                       }`}
                     >
-                      I've been designing for 17 years. My background in art and
-                      technology allows me to flexibly manage the product
-                      development process. I've led design teams, building
-                      bridges between stakeholders, users, and team members.
+                      Whenever righteousness declines and chaos rises, the
+                      divine manifests to restore balance. This eternal promise
+                      of Lord Krishna reflects the cyclical nature of time,
+                      where good and evil continuously shape the destiny of the
+                      world.
                     </h2>
 
                     <h2
@@ -296,16 +289,11 @@ const Mythology = () => {
                           : "pt-5 text-lg lg:text-md max-w-4xl whitespace-normal"
                       }`}
                     >
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Ad reprehenderit beatae rem, voluptates sequi neque culpa
-                      nobis deserunt! Corrupti perferendis sunt recusandae
-                      necessitatibus perspiciatis voluptatibus dolore,
-                      doloremque laudantium itaque quidem omnis aut odit quia?
-                      Minima possimus voluptatem est praesentium porro voluptate
-                      fugit corporis pariatur amet cum velit nemo, veritatis,
-                      vitae magni et tenetur nesciunt magnam recusandae expedita
-                      deserunt dicta. Nesciunt harum nemo facilis quisquam
-                      magnam nobis, alias exercitationem soluta quas.
+                      From age to age, the preservation of Dharma remains the
+                      foundation of cosmic order. The stories of the Mahabharata
+                      remind us that even in the darkest moments, truth,
+                      courage, and faith ultimately prevail, guided by the
+                      unseen hand of the divine.
                     </h2>
 
                     <div className="mt-16">
@@ -326,8 +314,13 @@ const Mythology = () => {
           {!isMobile && (
             <div className="absolute bottom-0 left-0 w-full z-50 overflow-hidden">
               <div ref={mainTextContentRef} className="flex whitespace-nowrap">
-                <h1 className="text-6xl lg:text-8xl font-heading leading-1.3 xl:text-[20vh] font-bold text-neutral-800 inline-block ml-6">
-                  I can create Experience that tells a Story
+                <h1
+                  style={{ lineHeight: 1.7 }}
+                  className="text-6xl pt-10 lg:text-8xl font-hindi leading-1.3 xl:text-[12vh] font-bold text-neutral-800 inline-block ml-6"
+                >
+                  यदा यदा हि धर्मस्य ग्लानिर्भवति भारत। अभ्युत्थानमधर्मस्य
+                  तदात्मानं सृजाम्यहम् ॥ परित्राणाय साधूनां विनाशाय च
+                  दुष्कृताम्। धर्मसंस्थापनार्थाय सम्भवामि युगे युगे ॥
                 </h1>
               </div>
             </div>

@@ -38,6 +38,17 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "hindi";
+  src: url("./assets/fonts/hindi.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-hindi{
+  font-family: "hindi", sans-serif;
+}
+
 .font-heading{
   font-family: "heading", sans-serif;
 }
