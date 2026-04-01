@@ -5,12 +5,12 @@ import Banner from '../components/Banner'
 
 const Home = () => {
   return (
-    <div>
-        <Hero/>
-        <About/>
-        <Banner/>
+    <div className="pt-20">
+      <Hero />
+      <About />
+      <Banner />
     </div>
-  )
+  );
 }
 
 export default Home
