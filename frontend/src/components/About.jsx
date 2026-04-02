@@ -70,7 +70,7 @@ const About = () => {
       "
     >
       {/* Heading */}
-      <h1
+      {/* <h1
         id="abouttext"
         className="
           text-4xl 
@@ -84,7 +84,7 @@ const About = () => {
         "
       >
         About Us
-      </h1>
+      </h1> */}
 
       {/* Image Section */}
       <div className="relative w-full max-w-5xl rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl mb-10 sm:mb-12">
