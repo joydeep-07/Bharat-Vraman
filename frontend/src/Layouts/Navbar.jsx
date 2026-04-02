@@ -98,18 +98,18 @@ const Navbar = () => {
           <div className="flex justify-between items-center h-15 sm:h-18 md:h-20">
             {/* Logo */}
             <div className="text-center cursor-pointer">
-              <Link to="/" className="flex items-baseline">
+              <Link to="/" className="flex font-hindi font-semibold items-baseline">
                 <span
                   className=" text-lg sm:text-xl md:text-3xl pr-1 tracking-tight"
                   style={{ color: "var(--accent-secondary)" }}
                 >
-                  Incredible
+                  भारत
                 </span>
                 <span
                   className=" text-lg sm:text-xl md:text-3xl tracking-wider"
                   style={{ color: "var(--accent-gold)" }}
                 >
-                  India
+                  भ्रमण 
                 </span>
               </Link>
 
@@ -228,7 +228,6 @@ const Navbar = () => {
         className={`side-panel fixed bg-[var(--bg-main)] top-0 right-0 h-full w-[70vw] z-50 transform transition-transform duration-300 md:hidden ${
           isSidePanelOpen ? "translate-x-0" : "translate-x-full"
         }`}
-       
       >
         <div className="flex flex-col h-full pt-20 px-6">
           <button
