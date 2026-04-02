@@ -20,11 +20,8 @@ const Hero = () => {
           {/* MAIN HEADING - No animation, no ref */}
           <div
             id="bigtext"
-            className="
-             
-              text-[30px] 
-              xs:text-[50px]
-              sm:text-[90px]
+            className="            
+              text-[55px] 
               md:text-[130px] 
               lg:text-[145px] 
               leading-none
