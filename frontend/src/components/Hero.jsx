@@ -21,20 +21,19 @@ const Hero = () => {
           <div
             id="bigtext"
             className="            
-              text-[55px] 
-              md:text-[130px] 
-              lg:text-[145px] 
+              text-[5.2vh] 
+              md:text-[14.8vh] 
               leading-none
             "
           >
             <div className="overflow-hidden">
-              <span className="block font-heading">India's Heritage &</span>
+              <span className="block font-heading">
+                India's temple Heritage
+              </span>
             </div>
 
             <div className="overflow-hidden">
-              <span className="block font-heading">
-                Pilgrimage
-              </span>
+              <span className="block font-heading">& Pilgrimage</span>
             </div>
           </div>
 

@@ -66,7 +66,7 @@ const CircleCursor = ({ targetId, hoverId, noHoverId }) => {
 
   return (
     <div
-      className="pointer-events-none fixed z-[60]"
+      className="pointer-events-none hidden md:flex fixed z-[60]"
       style={{
         width: `${size}px`,
         height: `${size}px`,

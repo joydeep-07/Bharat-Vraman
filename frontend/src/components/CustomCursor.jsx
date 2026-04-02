@@ -58,7 +58,7 @@ const CustomCursor = ({ icon: Icon, targetId }) => {
 
   return (
     <div
-      className="pointer-events-none fixed z-50 flex items-center justify-center bg-white/50 backdrop-blur-xs shadow-lg"
+      className="pointer-events-none fixed z-50 hidden md:flex items-center justify-center bg-white/50 backdrop-blur-xs shadow-lg"
       style={{
         top: cursorPos.y - 45,
         left: cursorPos.x - 45,

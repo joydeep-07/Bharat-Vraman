@@ -106,7 +106,7 @@ const About = () => {
           autoPlay
           loop
           muted
-          className="w-full h-[400px] object-cover"
+          className="w-full md:h-[400px] object-cover"
         />
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
