@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-const CircleCursor = ({ targetId, hoverId }) => {
+const CircleCursor = ({ targetId, hoverId, noHoverId }) => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [isActive, setIsActive] = useState(false);
   const [size, setSize] = useState(50);
+  const [isBlocked, setIsBlocked] = useState(false);
 
   useEffect(() => {
     const moveHandler = (e) => {
@@ -26,6 +27,7 @@ const CircleCursor = ({ targetId, hoverId }) => {
     return () => window.removeEventListener("mousemove", moveHandler);
   }, [targetId]);
 
+  // hover size effect
   useEffect(() => {
     const hover = document.getElementById(hoverId);
     if (!hover) return;
@@ -42,7 +44,25 @@ const CircleCursor = ({ targetId, hoverId }) => {
     };
   }, [hoverId]);
 
-  if (!isActive) return null;
+  // 🔴 disable cursor on specific element
+  useEffect(() => {
+    const block = document.getElementById(noHoverId);
+    if (!block) return;
+
+    const enter = () => setIsBlocked(true);
+    const leave = () => setIsBlocked(false);
+
+    block.addEventListener("mouseenter", enter);
+    block.addEventListener("mouseleave", leave);
+
+    return () => {
+      block.removeEventListener("mouseenter", enter);
+      block.removeEventListener("mouseleave", leave);
+    };
+  }, [noHoverId]);
+
+  // ❌ hide cursor if not active OR blocked
+  if (!isActive || isBlocked) return null;
 
   return (
     <div
@@ -54,11 +74,10 @@ const CircleCursor = ({ targetId, hoverId }) => {
         top: mousePos.y - size / 2,
         left: mousePos.x - size / 2,
 
-        backdropFilter: "grayscale(1)", 
+        backdropFilter: "grayscale(1)",
         WebkitBackdropFilter: "grayscale(1)",
 
         backgroundColor: "rgba(255,255,255,0.2)",
-        // border: "1px solid rgba(0,0,0,0.3)",
 
         transition: "width 0.3s ease-out, height 0.3s ease-out",
       }}

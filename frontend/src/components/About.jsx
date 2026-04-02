@@ -2,7 +2,10 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import img from "../assets/images/ban.jpg";
+import vid from '../assets/videos/spritual.mp4'
 import CircleCursor from "./CircleCursor";
+import CustomCursor from "./CustomCursor";
+import { FiPlay } from "react-icons/fi";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -85,7 +88,7 @@ const About = () => {
 
       {/* Image Section */}
       <div className="relative w-full max-w-5xl rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl mb-10 sm:mb-12">
-        <img
+        {/* <img
           className="
             w-full 
             h-[180px] 
@@ -95,6 +98,15 @@ const About = () => {
           "
           src={img}
           alt="about"
+        /> */}
+
+        <video
+          id="video1"
+          src={vid}
+          autoPlay
+          loop
+          muted
+          className="w-full h-[400px] object-cover"
         />
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
@@ -122,11 +134,13 @@ const About = () => {
           px-1 sm:px-4
         "
       >
+      
         {splitTextToSpans(
           "Welcome to The Art Gallery, a curated collection of exquisite artworks from around the world. Our mission is to connect art enthusiasts with stunning pieces that inspire and captivate. Whether you're an avid collector or a casual admirer, we invite you to explore our diverse range of artworks and discover the stories behind each piece. Thank you for being a part of our artistic journey.",
         )}
       </div>
-      <CircleCursor targetId={"about"} hoverId={"abouttext"} />
+      <CircleCursor targetId={"about"} hoverId={"abouttext"} noHoverId={"video1"} />
+      <CustomCursor icon={FiPlay} targetId="video1" />
     </section>
   );
 };

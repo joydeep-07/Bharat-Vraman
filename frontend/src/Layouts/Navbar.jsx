@@ -9,6 +9,7 @@ import {
   FiBookOpen,
 } from "react-icons/fi";
 
+
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
