@@ -21,7 +21,7 @@ const Hero = () => {
           <div
             id="bigtext"
             className="            
-              text-[5.2vh] 
+              text-[10vw] 
               md:text-[14.8vh] 
               leading-none
             "
