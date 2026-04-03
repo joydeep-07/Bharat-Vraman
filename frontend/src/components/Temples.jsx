@@ -1,8 +1,14 @@
 import React from "react";
 import Footer from "../layouts/Footer";
-import temples from "../utils/temples"; // <-- your array file
+import temples from "../utils/temples";
+import { useNavigate } from "react-router-dom";
 
 const Temples = () => {
+  const navigate =  useNavigate();
+
+ const handleNavigate = (slug) => {
+   navigate(`/temple/${slug}`);
+ };
   return (
     <>
       <div className="flex justify-center items-center p-5 pt-25">
@@ -48,6 +54,7 @@ const Temples = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10">
             {temples.map((temple) => (
               <div
+                onClick={() => handleNavigate(temple.slug)}
                 key={temple.id}
                 className="group cursor-pointer overflow-hidden transition"
               >
@@ -62,7 +69,9 @@ const Temples = () => {
 
                 {/* CONTENT */}
                 <div className="py-4 px-2">
-                  <h2 className="text-xl font-heading tracking-wider font-medium">{temple.name}</h2>
+                  <h2 className="text-xl font-heading tracking-wider font-medium">
+                    {temple.name}
+                  </h2>
                   <p className="text-sm text-neutral-500">
                     {temple.location.state}
                   </p>
@@ -70,8 +79,6 @@ const Temples = () => {
               </div>
             ))}
           </div>
-         
-          
         </div>
       </div>
       <Footer />

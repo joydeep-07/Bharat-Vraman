@@ -15,7 +15,7 @@ import SmoothScroll from "./utils/SmoothScroll";
 const App = () => {
   return (
     <Router>
-      <SmoothScroll/>
+      <SmoothScroll />
       <Routes>
         {/* Root Layout */}
         <Route path="/" element={<Root />}>
@@ -24,7 +24,7 @@ const App = () => {
           <Route path="explore" element={<ExploreTemples />} />
           <Route path="festivals" element={<Festivals />} />
           <Route path="mythology" element={<Mythology />} />
-          <Route path="temple/:id" element={<TempleDetail />} />
+          <Route path="temple/:slug" element={<TempleDetail />} />
         </Route>
       </Routes>
     </Router>
