@@ -1,6 +1,8 @@
 import React, { useState, useRef } from "react";
 import MusicButton from "./MusicButton";
 import CircularText from "./CircularText";
+import { Music2 } from "lucide-react";
+import CircleCursor from "./CircleCursor";
 
 const MusicPlayer = () => {
   const [open, setOpen] = useState(false);
@@ -31,34 +33,48 @@ const MusicPlayer = () => {
       {/* 🔊 AUDIO */}
       <audio ref={audioRef} src="/Chanakya.mp3" loop />
 
-      {/* 🌑 MODAL */}
+      {/* 🌑 MODAL (UPDATED DESIGN) */}
       {open && (
-        <div className="fixed inset-0 flex items-center justify-center z-[9999] bg-black/50 backdrop-blur-sm">
-          <div className="bg-white dark:bg-neutral-900 text-black dark:text-white p-8 rounded-2xl shadow-2xl w-[90%] max-w-md text-center">
-            <h2 className="text-xl font-semibold mb-4">
-              Do you want to continue with music?
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
+        >
+          <div className="flex flex-col items-center bg-[var(--bg-main)] shadow-xl rounded-sm py-6 px-5 md:w-[460px] w-[370px] border border-[var(--border-light)]/40">
+            {/* ICON */}
+            <div className="flex items-center justify-center p-4 bg-[var(--accent-primary)]/10 border border-[var(--border-light)] rounded-full">
+              <Music2 className="text-[var(--accent-primary)]" />
+            </div>
+
+            {/* TITLE */}
+            <h2 className="text-[var(--text-main)] font-semibold mt-4 text-xl text-center">
+              Do you want to continue with music ?
             </h2>
 
-            <div className="flex justify-center gap-4 mt-6">
+            {/* DESCRIPTION */}
+            <p className="text-sm text-[var(--text-secondary)] mt-2 text-center">
+              You can mute/unmute anytime.
+            </p>
+
+            {/* BUTTONS */}
+            <div className="flex items-center justify-center gap-4 mt-5 w-full">
               <button
-                onClick={handleYes}
-                className="px-5 py-2 rounded-full bg-green-500 text-white"
+                onClick={() => setOpen(false)}
+                className="w-full cursor-pointer md:w-36 h-10 rounded-sm bg-neutral-800 text-[var(--bg-main)] font-medium text-sm hover:opacity-90 transition duration-200"
               >
-                Yes
+                No
               </button>
 
               <button
-                onClick={() => setOpen(false)}
-                className="px-5 py-2 rounded-full bg-red-500 text-white"
+                onClick={handleYes}
+                className="w-full cursor-pointer md:w-36 h-10 rounded-sm text-white bg-green-600 font-medium text-sm hover:bg-green-700 transition duration-200"
               >
-                No
+                Yes
               </button>
             </div>
           </div>
         </div>
       )}
 
-      {/* CIRCULAR TEXT WITH CENTER BUTTON */}
+      {/* 🔵 CIRCULAR TEXT WITH CENTER BUTTON */}
       <CircularText
         text="♪ CHANAKYA • BY RISHAB SHARMA "
         centerContent={
