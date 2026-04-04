@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import temples from "../utils/temples";
-import Footer from "../layouts/Footer";
+// import Footer from "../layouts/Footer";
 
 const TempleDetail = () => {
   const { slug } = useParams();
@@ -210,7 +210,7 @@ const TempleDetail = () => {
           </div>
         )}
       </div>
-      <Footer/>
+      {/* <Footer/> */}
     </>
   );
 };

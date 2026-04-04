@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "../layouts/Footer";
+// import Footer from "../layouts/Footer";
 import temples from "../utils/temples";
 import { useNavigate } from "react-router-dom";
 
@@ -81,7 +81,7 @@ const Temples = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

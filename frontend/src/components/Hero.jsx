@@ -1,14 +1,7 @@
 import React from "react";
-// import { gsap } from "gsap";        // ← Removed
-// import { ScrollTrigger } from "gsap/ScrollTrigger"; // ← Removed
 import CircleCursor from "./CircleCursor";
 
-// gsap.registerPlugin(ScrollTrigger); // ← Removed
-
 const Hero = () => {
-  // const headingRef = useRef(null);   // ← Removed (no longer needed)
-
-  // useEffect removed entirely
 
   return (
     <>

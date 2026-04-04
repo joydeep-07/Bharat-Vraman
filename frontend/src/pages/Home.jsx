@@ -4,7 +4,7 @@ import About from '../components/About'
 import Banner from '../components/Banner'
 import Story from '../components/Story'
 import Verse from '../components/Verse'
-import Footer from '../layouts/Footer'
+// import Footer from '../layouts/Footer'
 
 const Home = () => {
   return (
@@ -16,7 +16,7 @@ const Home = () => {
       <div className="py-10">
         <Verse />
       </div>
-     <Footer/>
+     {/* <Footer/> */}
     </div>
   );
 }
