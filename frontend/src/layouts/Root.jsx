@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import { Outlet } from 'react-router-dom'
 import MusicPlayer from '../components/MusicPlayer';
+import CircularText from '../components/CircularText';
 
 const Root = () => {
   return (
@@ -11,8 +12,9 @@ const Root = () => {
         <Outlet />
       </div>
 
-      <div className='fixed bottom-5 right-5'>
-       <MusicPlayer/>
+      <div className="fixed bottom-5 right-5">
+       
+        <MusicPlayer/>
       </div>
     </div>
   );

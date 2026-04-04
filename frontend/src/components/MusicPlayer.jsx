@@ -1,42 +1,16 @@
-import React, { useState, useRef, useEffect } from "react";
-import { gsap } from "gsap";
-import { FaMusic, FaVolumeUp, FaVolumeMute } from "react-icons/fa";
+import React, { useState, useRef } from "react";
+import MusicButton from "./MusicButton";
+import CircularText from "./CircularText";
 
 const MusicPlayer = () => {
   const [open, setOpen] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
 
-  const dialogRef = useRef(null);
   const audioRef = useRef(null);
 
-  useEffect(() => {
-    if (open) {
-      gsap.fromTo(
-        dialogRef.current,
-        { scale: 0.6, opacity: 0 },
-        { scale: 1, opacity: 1, duration: 0.4, ease: "power3.out" },
-      );
-    }
-  }, [open]);
-
-  
-  const handleYes = () => {
-    audioRef.current.play();
-    setIsPlaying(true);
-    setIsMuted(false);
-    setOpen(false);
-  };
-
-  
-  const handleNo = () => {
-    setOpen(false);
-  };
-
-  
-  const handleButtonClick = () => {
+  const handleClick = () => {
     if (isPlaying) {
-      // toggle mute
       const newMute = !isMuted;
       audioRef.current.muted = newMute;
       setIsMuted(newMute);
@@ -45,41 +19,22 @@ const MusicPlayer = () => {
     }
   };
 
+  const handleYes = () => {
+    audioRef.current.play();
+    setIsPlaying(true);
+    setIsMuted(false);
+    setOpen(false);
+  };
+
   return (
     <>
-      {/* 🎵 Floating Button */}
-      <div className="fixed bottom-8 right-8 z-50">
-        <button
-          onClick={handleButtonClick}
-          className="w-14 h-14 rounded-full bg-gradient-to-br from-amber-500 to-orange-500 text-white text-xl shadow-lg hover:scale-110 transition-all duration-300 flex items-center justify-center"
-        >
-          {isPlaying ? (
-            isMuted ? (
-              <FaVolumeMute size={15} />
-            ) : (
-              <FaMusic
-                size={15}
-                className={isPlaying ? "animate-spin-slow" : ""}
-              />
-            )
-          ) : (
-            <FaMusic
-              size={15}
-              className={isPlaying ? "animate-spin-slow" : ""}
-            />
-          )}
-        </button>
-      </div>
-      {/* 🔊 Audio */}
+      {/* 🔊 AUDIO */}
       <audio ref={audioRef} src="/Chanakya.mp3" loop />
 
-      {/* 🌑 Dialog */}
+      {/* 🌑 MODAL */}
       {open && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
-          <div
-            ref={dialogRef}
-            className="bg-white dark:bg-neutral-900 text-black dark:text-white p-8 rounded-2xl shadow-2xl w-[90%] max-w-md text-center"
-          >
+        <div className="fixed inset-0 flex items-center justify-center z-[9999] bg-black/50 backdrop-blur-sm">
+          <div className="bg-white dark:bg-neutral-900 text-black dark:text-white p-8 rounded-2xl shadow-2xl w-[90%] max-w-md text-center">
             <h2 className="text-xl font-semibold mb-4">
               Do you want to continue with music?
             </h2>
@@ -87,14 +42,14 @@ const MusicPlayer = () => {
             <div className="flex justify-center gap-4 mt-6">
               <button
                 onClick={handleYes}
-                className="px-5 py-2 rounded-full bg-green-500 text-white hover:scale-105 transition"
+                className="px-5 py-2 rounded-full bg-green-500 text-white"
               >
                 Yes
               </button>
 
               <button
-                onClick={handleNo}
-                className="px-5 py-2 rounded-full bg-red-500 text-white hover:scale-105 transition"
+                onClick={() => setOpen(false)}
+                className="px-5 py-2 rounded-full bg-red-500 text-white"
               >
                 No
               </button>
@@ -102,6 +57,18 @@ const MusicPlayer = () => {
           </div>
         </div>
       )}
+
+      {/* 🎯 CIRCULAR TEXT WITH CENTER BUTTON */}
+      <CircularText
+        text="♪ CHANAKYA • BY RISHAB SHARMA "
+        centerContent={
+          <MusicButton
+            isPlaying={isPlaying}
+            isMuted={isMuted}
+            onClick={handleClick}
+          />
+        }
+      />
     </>
   );
 };
