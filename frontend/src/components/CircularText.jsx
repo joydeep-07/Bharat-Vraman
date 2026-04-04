@@ -75,7 +75,7 @@ const CircularText = ({
       className="relative border border-[var(--border-light)] bg-[var(--bg-secondary)] p-1 rounded-full 
                     w-[88px] h-[88px] 
                     sm:w-[100px] sm:h-[100px] 
-                    md:w-[145px] md:h-[145px] 
+                    md:w-[110px] md:h-[110px] 
                     mx-auto"
     >
       {/* 🔥 CENTER CONTENT (Music Button) */}
@@ -121,7 +121,7 @@ const CircularText = ({
               key={i}
               className="
                 absolute inline-block inset-0 tracking-wider
-                text-[11px] sm:text-[11px] md:text-sm
+                text-[9px] sm:text-[11px] md:text-sm
                 transition-all duration-500 
                 ease-[cubic-bezier(0,0,0,1)]
               "

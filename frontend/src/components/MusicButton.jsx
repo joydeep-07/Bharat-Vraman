@@ -5,16 +5,16 @@ const MusicButton = ({ isPlaying, isMuted, onClick }) => {
   return (
     <button
       onClick={onClick}
-      className="p-4 rounded-full text-xl hover:scale-110 transition-all duration-300 flex items-center justify-center"
+      className="md:p-4 p-3 bg-amber-500/20 rounded-full text-xl hover:scale-110 transition-all duration-300 flex items-center justify-center"
     >
       {isPlaying ? (
         isMuted ? (
-          <FaVolumeMute size={15} />
+          <FaVolumeMute size={14} />
         ) : (
-          <FaMusic size={15} className="animate-spin-slow" />
+          <FaMusic size={14}/>
         )
       ) : (
-        <FaMusic size={15} />
+        <FaMusic size={14} />
       )}
     </button>
   );
