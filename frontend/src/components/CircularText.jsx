@@ -121,7 +121,7 @@ const CircularText = ({
               key={i}
               className="
                 absolute inline-block inset-0 tracking-wider
-                text-[9px] sm:text-[11px] md:text-sm
+                text-[9px] sm:text-[11px] md:text-[11px]
                 transition-all duration-500 
                 ease-[cubic-bezier(0,0,0,1)]
               "
