@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import MusicButton from "./MusicButton";
 import CircularText from "./CircularText";
 import { Music2 } from "lucide-react";
@@ -10,6 +10,10 @@ const MusicPlayer = () => {
   const [isMuted, setIsMuted] = useState(false);
 
   const audioRef = useRef(null);
+
+  useEffect(() => {
+    setOpen(true);
+  }, []);
 
   const handleClick = () => {
     if (isPlaying) {
@@ -35,9 +39,7 @@ const MusicPlayer = () => {
 
       {/* 🌑 MODAL (UPDATED DESIGN) */}
       {open && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
-        >
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-sm">
           <div className="flex flex-col items-center bg-[var(--bg-main)] shadow-xl rounded-sm py-6 px-5 md:w-[460px] w-[370px] border border-[var(--border-light)]/40">
             {/* ICON */}
             <div className="flex items-center justify-center p-4 bg-[var(--accent-primary)]/10 border border-[var(--border-light)] rounded-full">
