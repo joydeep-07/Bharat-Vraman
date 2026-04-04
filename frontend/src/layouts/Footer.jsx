@@ -2,10 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import tree from "../assets/images/temple.png";
 import { IoMailOutline, IoLogoLinkedin } from "react-icons/io5";
+import CircleCursor from "../components/CircleCursor";
 
 const Footer = () => {
   return (
-    <footer className="h-auto md:h-[250px] flex flex-col justify-between">
+    <footer
+      id="footer"
+      className="h-auto md:h-[250px] flex flex-col justify-between"
+    >
       {/* Top Section */}
       <div className="flex flex-col md:flex-row gap-6 md:gap-10 justify-center items-center px-4">
         <div>
@@ -13,18 +17,19 @@ const Footer = () => {
         </div>
 
         <div className="text-center md:text-left px-2 md:px-0">
-          <h2 className="max-w-md text-neutral-800 text-sm">
-            They say happiness is when you plant a tree for your grandchildren
-            to rest under. Let me know if this approach resonates with you.
+          <h2 className="max-w-md text-neutral-800 text-xs">
+            To witness such a vision is to stand before the truth of existence
+            itself a truth so intense that it dissolves the boundaries of
+            individuality and expands the mind beyond its limits.
           </h2>
 
           <div className="flex text-neutral-800 flex-col md:flex-row gap-3 md:gap-10 text-xs pt-5">
-            <div className="flex  justify-center md:justify-start items-center gap-2">
+            <div className="flex cursor-pointer justify-center md:justify-start items-center gap-2">
               <IoMailOutline />
               <h3 className="break-all">joydeeprnp8821@gmail.com</h3>
             </div>
 
-            <div className="flex justify-center md:justify-start items-center gap-2">
+            <div className="flex cursor-pointer justify-center md:justify-start items-center gap-2">
               <IoLogoLinkedin />
               <h3>/ Linkedin</h3>
             </div>
@@ -37,24 +42,21 @@ const Footer = () => {
         {/* Hide navigation on mobile */}
         <nav className="hidden md:flex text-sm text-gray-100 gap-8">
           <Link
-            to="/are/we/working"
+            to="/mythology"
             className="hover:text-gray-300 transition-colors"
           >
-            Who are we?
+            Mythology
+          </Link>
+
+          <Link to="/explore" className="hover:text-gray-300 transition-colors">
+            Explore Temples
           </Link>
 
           <Link
-            to="/collections"
+            to="/festivals"
             className="hover:text-gray-300 transition-colors"
           >
-            States of Matter
-          </Link>
-
-          <Link
-            to="/contacts"
-            className="hover:text-gray-300 transition-colors"
-          >
-            Contact Us
+            Festivals
           </Link>
         </nav>
 
@@ -65,6 +67,7 @@ const Footer = () => {
           advertising cookies. Read more in our privacy policy.
         </p>
       </div>
+      <CircleCursor targetId={"footer"} />
     </footer>
   );
 };

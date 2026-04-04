@@ -47,8 +47,7 @@ const Hero = () => {
               mb-8 sm:mb-10 md:mb-12
             "
           >
-            Where artistic vision meets exceptional craftsmanship in every
-            curated piece
+            Festivals, Rituals & Pilgrimage Routes Across India.
           </p>
         </div>
 
