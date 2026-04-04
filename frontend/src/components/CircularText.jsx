@@ -71,7 +71,13 @@ const CircularText = ({
   };
 
   return (
-    <div className="relative border border-[var(--border-light)] bg-[var(--bg-secondary)] p-1 rounded-full w-[145px] h-[145px] mx-auto">
+    <div
+      className="relative border border-[var(--border-light)] bg-[var(--bg-secondary)] p-1 rounded-full 
+                    w-[88px] h-[88px] 
+                    sm:w-[100px] sm:h-[100px] 
+                    md:w-[145px] md:h-[145px] 
+                    mx-auto"
+    >
       {/* 🔥 CENTER CONTENT (Music Button) */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
         {centerContent}
@@ -114,8 +120,8 @@ const CircularText = ({
             <span
               key={i}
               className="
-                absolute inline-block inset-0 
-                text-sm 
+                absolute inline-block inset-0 tracking-wider
+                text-[11px] sm:text-[11px] md:text-sm
                 transition-all duration-500 
                 ease-[cubic-bezier(0,0,0,1)]
               "

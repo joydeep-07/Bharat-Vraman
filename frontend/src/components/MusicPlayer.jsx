@@ -58,7 +58,7 @@ const MusicPlayer = () => {
         </div>
       )}
 
-      {/* 🎯 CIRCULAR TEXT WITH CENTER BUTTON */}
+      {/* CIRCULAR TEXT WITH CENTER BUTTON */}
       <CircularText
         text="♪ CHANAKYA • BY RISHAB SHARMA "
         centerContent={
