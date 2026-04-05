@@ -30,6 +30,7 @@ const MusicPlayer = () => {
   };
 
   const handleYes = () => {
+    audioRef.current.volume = 0.2;
     audioRef.current.play();
     setIsPlaying(true);
     setIsMuted(false);
