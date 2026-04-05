@@ -12,7 +12,11 @@ const MusicPlayer = () => {
   const audioRef = useRef(null);
 
   useEffect(() => {
-    setOpen(true);
+    const timer = setTimeout(() => {
+      setOpen(true);
+    }, 2000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   const handleClick = () => {
@@ -34,10 +38,10 @@ const MusicPlayer = () => {
 
   return (
     <>
-      {/* 🔊 AUDIO */}
+      {/* AUDIO */}
       <audio ref={audioRef} src="/Chanakya.mp3" loop />
 
-      {/* 🌑 MODAL (UPDATED DESIGN) */}
+      {/* MODAL (UPDATED DESIGN) */}
       {open && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-sm">
           <div className="flex flex-col items-center bg-[var(--bg-main)] shadow-xl rounded-sm py-6 px-5 md:w-[460px] w-[370px] border border-[var(--border-light)]/40">
@@ -76,7 +80,7 @@ const MusicPlayer = () => {
         </div>
       )}
 
-      {/* 🔵 CIRCULAR TEXT WITH CENTER BUTTON */}
+      {/* CIRCULAR TEXT WITH CENTER BUTTON */}
       <CircularText
         text="♪ CHANAKYA • BY RISHAB SHARMA "
         centerContent={

@@ -72,7 +72,7 @@ const Temples = () => {
                     {temple.name}
                   </h2>
                   <p className="text-sm text-neutral-500">
-                    {temple.location.state}
+                    {temple.state}
                   </p>
                 </div>
               </div>
