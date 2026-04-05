@@ -61,17 +61,20 @@ const TempleDetail = () => {
 
           {/* Side Images */}
           <div className="w-full lg:w-1/3 flex flex-col md:mt-10 gap-6">
-            <img
-              src={temple.images[1]}
-              alt={`${temple.name} view 2`}
-              className="w-full h-56 sm:h-64 md:h-72 object-cover object-top rounded-xs transition duration-500"
-            />
-
-            <img
-              src={temple.images[2]}
-              alt={`${temple.name} view 3`}
-              className="w-full h-56 sm:h-64 md:h-72 object-cover object-top rounded-xs transition duration-500"
-            />
+            {temple.images[1] && (
+              <img
+                src={temple.images[1]}
+                alt={`${temple.name} view 2`}
+                className="w-full object-cover object-top rounded-xs transition duration-500"
+              />
+            )}
+            {temple.images[2] && (
+              <img
+                src={temple.images[2]}
+                alt={`${temple.name} view 3`}
+                className="w-full  object-cover object-top rounded-xs transition duration-500"
+              />
+            )}
           </div>
         </div>
       </div>
