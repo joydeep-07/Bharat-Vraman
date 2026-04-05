@@ -7,7 +7,7 @@ const Hero = () => {
     <>
       <div
         id="hero"
-        className="md:min-h-screen flex flex-col items-center pt-22 justify-center relative overflow-hidden"
+        className="md:min-h-screen min-h-[48vh] flex flex-col items-center pt-22 justify-center relative overflow-hidden"
       >
         <div className="text-center px-4 sm:px-6 md:px-8 max-w-6xl mx-auto relative">
           {/* MAIN HEADING - No animation, no ref */}

@@ -51,8 +51,8 @@ const MusicPlayer = () => {
             </div>
 
             {/* TITLE */}
-            <h2 className="text-[var(--text-main)] font-semibold mt-4 text-xl text-center">
-              Do you want to continue with music ?
+            <h2 className="text-[var(--text-main)] font-semibold mt-4 text-[2vh] text-center">
+              Would you like to continue with music ?
             </h2>
 
             {/* DESCRIPTION */}
