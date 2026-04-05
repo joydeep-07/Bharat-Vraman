@@ -17,36 +17,35 @@ const Temples = () => {
             {" "}
             <h1
               style={{ lineHeight: 1, letterSpacing: "0.03em" }}
-              className="text-neutral-800 text-[50px] font-heading sm:text-[65px] md:text-[80px] leading-none"
+              className="text-neutral-800 font-heading text-[5vh]  md:text-[80px] leading-none"
             >
               {" "}
-              States{" "}
+              Timeless{" "}
             </h1>{" "}
             <h1
               style={{ lineHeight: 1, letterSpacing: "0.03em" }}
-              className="text-neutral-800 font-heading text-[55px] sm:text-[75px] md:text-[90px] leading-none"
+              className="text-neutral-800 font-heading text-[6vh] sm:text-[75px] md:text-[90px] leading-none"
             >
               {" "}
-              of Matter,{" "}
+              Temples of India,{" "}
             </h1>{" "}
             <p className="max-w-md text-md mt-3">
               {" "}
-              For more design help, inspiration, and case studies, sign up for
-              our newsletter (by signing up, you accept our privacy
-              policy).{" "}
+              Explore ancient temples, their history, architecture, and
+              spiritual significance across India
             </p>{" "}
           </div>{" "}
           {/* -------- INPUT SECTION -------- */}{" "}
           <div className="pt-7 gap-2 flex flex-col sm:flex-row w-full sm:w-auto">
             {" "}
             <input
-              className="p-3 w-full sm:w-xl rounded-[4px] border"
+              className="p-3 w-full sm:w-xl rounded-[4px] border border-neutral-800/50 outline-none"
               type="email"
-              placeholder="Enter your email"
+              placeholder="Search for a temple, location"
             />{" "}
             <button className="p-3 bg-neutral-700 text-[#fffceb] hover:bg-neutral-800 rounded-[4px] border">
               {" "}
-              Subscribe{" "}
+              Search{" "}
             </button>{" "}
           </div>
           {/* -------- GRID -------- */}
@@ -71,7 +70,7 @@ const Temples = () => {
                   <h2 className="text-xl font-heading tracking-wider font-medium">
                     {temple.name}
                   </h2>
-                  <p className="text-sm text-neutral-500">
+                  <p className="text-sm line-clamp-2 text-neutral-500">
                     {temple.state}
                   </p>
                 </div>
