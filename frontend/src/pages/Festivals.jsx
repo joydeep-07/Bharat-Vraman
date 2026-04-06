@@ -1,8 +1,11 @@
 import React from 'react'
+import UpcomingFestivals from '../components/UpcomingFestivals'
 
 const Festivals = () => {
   return (
-    <div>Festivals</div>
+    <div className='pt-20'>
+      <UpcomingFestivals/>
+    </div>
   )
 }
 
