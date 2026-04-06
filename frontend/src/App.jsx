@@ -11,6 +11,7 @@ import Festivals from "./pages/Festivals";
 import Mythology from "./pages/Mythology";
 import TempleDetail from "./pages/TempleDetail";
 import SmoothScroll from "./utils/SmoothScroll";
+import TripPlan from "./pages/TripPlan";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="explore" element={<ExploreTemples />} />
           <Route path="festivals" element={<Festivals />} />
+          <Route path="trip-planner" element={<TripPlan />} />
           <Route path="mythology" element={<Mythology />} />
           <Route path="temple/:slug" element={<TempleDetail />} />
         </Route>

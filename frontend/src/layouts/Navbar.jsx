@@ -166,7 +166,7 @@ const Navbar = () => {
 
                 <li className="group">
                   <Link
-                    to="/festivals"
+                    to="/trip-planner"
                     className="tracking-wide transition-colors duration-300 relative py-2 text-sm"
                     style={{ color: "var(--text-main)" }}
                     onMouseEnter={(e) =>
@@ -176,7 +176,7 @@ const Navbar = () => {
                       (e.target.style.color = "var(--text-main)")
                     }
                   >
-                    Festivals
+                    Plan a trip
                     <span
                       className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full"
                       style={{ background: "var(--accent-primary)" }}
@@ -243,7 +243,7 @@ const Navbar = () => {
             {[
               { name: "Mythology", icon: FiBookOpen, path: "/mythology" },
               { name: "Explore Temples", icon: FiCompass, path: "/explore" },
-              { name: "Festivals", icon: FiCalendar, path: "/festivals" },
+              { name: "Plan a trip", icon: FiCalendar, path: "/trip-planner" },
               { name: "Contact", icon: FiMap, path: "/" },
             ].map((item, i) => (
               <li key={i}>
