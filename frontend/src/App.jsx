@@ -12,7 +12,7 @@ import Mythology from "./pages/Mythology";
 import TempleDetail from "./pages/TempleDetail";
 import SmoothScroll from "./utils/SmoothScroll";
 import TripPlan from "./pages/TripPlan";
-
+import AdminPanel from "./pages/admin/AdminPanel";
 
 const App = () => {
   return (
@@ -28,9 +28,10 @@ const App = () => {
           <Route path="trip-planner" element={<TripPlan />} />
           <Route path="mythology" element={<Mythology />} />
           <Route path="temple/:slug" element={<TempleDetail />} />
-
-         
         </Route>
+
+        {/* Admin Route - Outside standard layout */}
+        <Route path="/admin/*" element={<AdminPanel />} />
       </Routes>
     </Router>
   );
