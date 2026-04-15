@@ -16,7 +16,7 @@ const App = () => {
     <Router>
       <SmoothScroll />
       <Routes>
-        {/* Root Layout */}
+        {/* Root Layout -- OUTLET */}
         <Route path="/" element={<Root />}>
           {/* Nested Routes */}
           <Route index element={<Home />} />
