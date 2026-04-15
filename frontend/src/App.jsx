@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// Layout
 import Root from "./layouts/Root";
 import Home from "./pages/Home";
 import ExploreTemples from "./pages/ExploreTemples";
