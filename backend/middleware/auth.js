@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-
+// Auth Middelware updated to use JWT for authentication
 const authMiddleware = (req, res, next) => {
   try {
     const token = req.headers.authorization?.split(" ")[1];
@@ -15,3 +15,4 @@ const authMiddleware = (req, res, next) => {
 };
 
 export default authMiddleware;
+  
