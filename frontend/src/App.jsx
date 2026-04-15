@@ -27,7 +27,7 @@ const App = () => {
           <Route path="temple/:slug" element={<TempleDetail />} />
         </Route>
 
-        {/* Admin Route - Outside standard layout */}
+        {/* Admin Route */}
         <Route path="/admin/*" element={<AdminPanel />} />
       </Routes>
     </Router>
