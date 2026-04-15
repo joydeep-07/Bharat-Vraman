@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Layout
 import Root from "./layouts/Root";
-
-// Pages
 import Home from "./pages/Home";
 import ExploreTemples from "./pages/ExploreTemples";
 import Festivals from "./pages/Festivals";
