@@ -5,7 +5,7 @@ const templeSchema = new mongoose.Schema({
   slug: { type: String, required: true, unique: true },
   templeType: { type: String },
   established: { type: String },
-  state: { type: String }, // General location/state info
+  state: { type: String },
   city: { type: String },
   description: { type: String },
   images: [{ type: String }],
@@ -13,7 +13,7 @@ const templeSchema = new mongoose.Schema({
   // PRD Detailed Fields
   historicalBackground: { type: String },
   deityInformation: { type: String },
-  rituals: { type: String }, // or daily pooja schedule
+  rituals: { type: String }, 
   darshanTimings: { type: String },
   festivals: [{ type: String }],
   visitorGuidelines: { type: String },
