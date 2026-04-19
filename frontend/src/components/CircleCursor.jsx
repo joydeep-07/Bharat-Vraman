@@ -27,7 +27,7 @@ const CircleCursor = ({ targetId, hoverId, noHoverId }) => {
     return () => window.removeEventListener("mousemove", moveHandler);
   }, [targetId]);
 
-  // hover size effect
+  // hover size effect on specific element
   useEffect(() => {
     const hover = document.getElementById(hoverId);
     if (!hover) return;
