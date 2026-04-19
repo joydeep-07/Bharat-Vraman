@@ -61,7 +61,7 @@ const CircleCursor = ({ targetId, hoverId, noHoverId }) => {
     };
   }, [noHoverId]);
 
-  // ❌ hide cursor if not active OR blocked
+  // hide cursor if not active OR blocked
   if (!isActive || isBlocked) return null;
 
   return (
