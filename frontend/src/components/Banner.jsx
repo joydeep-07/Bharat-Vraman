@@ -1,6 +1,5 @@
 import React from "react";
 import CircleCursor from "./CircleCursor";
-// import HandCursor from "./HandCursor";
 
 const Banner = () => {
   return (
@@ -115,7 +114,6 @@ const Banner = () => {
       </div>
 
       <CircleCursor targetId="blogban" hoverId="blogtext" />
-      {/* <HandCursor targetId="ban" /> */}
     </>
   );
 };
