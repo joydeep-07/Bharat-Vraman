@@ -78,12 +78,12 @@ const CircularText = ({
                     md:w-[110px] md:h-[110px] 
                     mx-auto"
     >
-      {/* 🔥 CENTER CONTENT (Music Button) */}
+      {/* CENTER (Music Button) */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
         {centerContent}
       </div>
 
-      {/* 🔄 ROTATING TEXT */}
+      {/* ROTATING TEXT */}
       <motion.div
         className={`
           m-0 rounded-full w-full h-full relative
